@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Watch Together Sync",
+  "description": "Sync OTT playback with a friend and talk over microphone chat without screen-sharing.",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Watch Together",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
