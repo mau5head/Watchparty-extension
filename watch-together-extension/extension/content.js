@@ -12,7 +12,7 @@
     applyingRemoteSync: false,
     lastSyncAt: 0,
     settings: {
-      serverUrl: "ws://localhost:8787",
+      serverUrl: "wss://watchparty-extension-production.up.railway.app",
       room: "movie-night",
       name: "Friend",
     },
