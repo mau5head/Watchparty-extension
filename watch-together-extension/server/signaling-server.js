@@ -146,6 +146,7 @@ server.on("upgrade", (req, socket) => {
   socket.on("error", () => cleanup(client));
 });
 
-server.listen(PORT, () => {
-  console.log(`Watch Together signaling server listening on wss://watchparty-extension-production.up.railway.app`);
+server.listen(PORT, "0.0.0.0", () => {
+  console.log("PORT =", PORT);
+  console.log("Server started");
 });
