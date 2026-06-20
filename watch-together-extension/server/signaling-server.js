@@ -122,7 +122,7 @@ server.on("upgrade", (req, socket) => {
     type: "joined",
     id,
     room,
-    initiator: clients.size > 1,
+    initiator: clients.size === 1,
     peerCount: clients.size,
   });
   broadcast(room, id, { type: "peer-joined", name, peerCount: clients.size });
